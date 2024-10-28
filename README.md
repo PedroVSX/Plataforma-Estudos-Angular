@@ -1,3 +1,6 @@
+# Link
+https://vercel.com/api/toolbar/link/plataforma-estudos-angular.vercel.app?via=project-dashboard-alias-list&p=1&page=/
+
 # PlataformaEstudos
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
