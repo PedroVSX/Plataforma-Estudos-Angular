@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+
+<div class="home-content">
+    <div class="search-center-container">
+        <div class="search-container">
+            <input class="search-box" type="text" placeholder="Pesquise algum tópico ou comunidade...">
+            <img class="search-icon" width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/292929/search--v1.png" alt="search--v1"/>
+        </div>
+    </div>
+
+    <div class="topics-container">
+        <h2>Tópicos Recentes</h2>
+        <div class="topics">
+
+        </div>
+    </div>
+
+    <div class="groups-container">
+        <h2>Grupos Recomendados</h2>
+        <div class="groups" (click)="redirectToOtherPage('/group')">
+
+        </div>
+    </div>
+
+    <div class="topics-container">
+        <h2>Tópicos Recomendados</h2>
+        <div class="topics">
+
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
