@@ -3,7 +3,7 @@ $button-bg: #FBA234;
 $button-hover-bg: #e0922d;
 $text-color: white;
 
-.community-container {
+.group-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,9 +34,7 @@ $text-color: white;
         display: flex;
         justify-content: space-between; /* Espaça os itens entre o início e o fim */
         align-items: center; /* Alinha verticalmente */
-        width: 100%;
-        max-width: 1200px; /* Limita a largura máxima da área de informações */
-        padding: 0 2rem; /* Adiciona espaço interno nas laterais */
+        width: 98%;
         margin-top: -50px;
         z-index: 0;
 
@@ -83,11 +81,30 @@ $text-color: white;
             font-size: 1rem;
             border-radius: 20px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: transform 0.3s ease-out;
 
             &:hover {
                 background-color: $button-hover-bg;
+                transform: scale(1.1);
             }
         }
+    }
+}
+
+.topics-container {
+    display: flex;
+    margin: 2rem 0 2rem 1rem;
+    flex-direction: column;
+
+    .topics-container-title {
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
+    .topics {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        gap: 1rem;
     }
 }

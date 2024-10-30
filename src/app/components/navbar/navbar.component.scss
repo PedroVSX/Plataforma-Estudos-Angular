@@ -21,6 +21,7 @@ $text-color: white;
         font-size: 20px;
         color: $text-color;
         margin-right: 5rem;
+        cursor: pointer;
 
         .navbar-logo-image {
             width: 40px;
@@ -44,25 +45,35 @@ $text-color: white;
             overflow: hidden;
             max-height: 100px; // Define um limite para a altura, ajuste conforme necessário
 
-            li {
+            .link {
                 margin: 0 1.5rem; // Espaçamento entre itens
+                color: $text-color;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 20px;
+                cursor: pointer;
+                transition: transform 0.3s ease-out;
 
-                a {
-                    color: $text-color;
-                    text-decoration: none;
-                    font-weight: bold;
-                    font-size: 20px;
-                    cursor: pointer;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
+                &:hover {
+                    transform: scale(1.1);
                 }
             }
         }
 
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            margin-left: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
         .login-btn {
-            margin-left: auto; // Faz o botão "Entrar" ir para o final da navbar
+            margin-left: 1rem;
             background-color: $button-bg;
             border: none;
             color: $text-color;
@@ -70,9 +81,11 @@ $text-color: white;
             font-size: 1rem;
             border-radius: 20px;
             cursor: pointer;
+            transition: transform 0.3s ease-out;
 
             &:hover {
                 background-color: $button-hover-bg;
+                transform: scale(1.1);
             }
         }
 
