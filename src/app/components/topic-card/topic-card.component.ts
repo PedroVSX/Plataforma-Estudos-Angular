@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-topic-card',
@@ -9,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class TopicCardComponent {
 
+  constructor(private router: Router) {}
+
+  redirectToOtherPage(path: string) {
+    this.router.navigate([path]);
+  }
+  
 }
