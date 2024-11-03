@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
-import { TopicCardComponent } from '../../components/topic-card/topic-card.component';
+import { NavbarComponent } from '../../components/navbar-footer/navbar/navbar.component';
+import { TopicCardComponent } from '../../components/cards/topic-card/topic-card.component';
 import { Router } from '@angular/router';
 
 @Component({

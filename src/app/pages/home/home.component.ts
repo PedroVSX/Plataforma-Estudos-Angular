@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
-import { FooterComponent } from '../../components/footer/footer.component';
-import { TopicCardComponent } from '../../components/topic-card/topic-card.component';
-import { TopicSliderComponent } from '../../components/topic-slider/topic-slider.component';
+import { NavbarComponent } from '../../components/navbar-footer/navbar/navbar.component';
+import { FooterComponent } from '../../components/navbar-footer/footer/footer.component';
+import { TopicCardComponent } from '../../components/cards/topic-card/topic-card.component';
+import { TopicSliderComponent } from '../../components/sliders/topic-slider/topic-slider.component';
 import { Router } from '@angular/router';
 
 @Component({

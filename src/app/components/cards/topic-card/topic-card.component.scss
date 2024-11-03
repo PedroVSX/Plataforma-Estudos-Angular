@@ -83,3 +83,110 @@ $description-color: #555555;
         }
     }
 }
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        padding: 1rem;
+
+        .user-and-description-container {
+            width: 100%;
+
+            .user-info {
+                .user-photo {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                .user-name {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .description-container {
+                margin-top: 1rem;
+
+                .description {
+                    font-size: 0.95rem;
+                }
+            }
+        }
+
+        .image-container {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+
+        .user-and-description-container {
+            .user-info {
+                .user-photo {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .user-name {
+                    font-size: 1.1rem;
+                }
+            }
+
+            .description-container {
+                margin-top: 0.8rem;
+
+                .description {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        .image-container {
+            width: 90px;
+            height: 90px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+
+        .user-and-description-container {
+            .user-info {
+                .user-photo {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .user-name {
+                    font-size: 1rem;
+                }
+            }
+
+            .description-container {
+                margin-top: 0.5rem;
+
+                .description {
+                    font-size: 0.85rem;
+                }
+            }
+        }
+
+        .image-container {
+            width: 80px;
+            height: 80px;
+        }
+    }
+}

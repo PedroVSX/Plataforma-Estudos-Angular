@@ -7,9 +7,10 @@
     <div class="navbar-links" [ngClass]="{ 'show': isMenuOpen }">
         <ul class="navbar-menu">
             <li class="link" (click)="redirectToOtherPage('/')">Home</li>
+            <li class="link" (click)="redirectToOtherPage('/my-groups')">Meus grupos</li>
             <li class="link" (click)="redirectToOtherPage('/')">Perguntas Frequentes</li>
         </ul>
-        <img class="profile-icon" (click)="redirectToOtherPage('/account-settings')" src="https://img.icons8.com/material-sharp/40/E4F2FE/user-male-circle.png" alt="user-male-circle"/>
+        <img class="profile-icon" (click)="redirectToOtherPage('/account-settings')" src="https://img.icons8.com/material-rounded/40/E4F2FE/user-male-circle.png" alt="user-male-circle"/>
         <button class="login-btn" (click)="redirectToOtherPage('/login')"><strong>Entrar</strong></button> <!-- Mantido dentro do menu -->
     </div>
 

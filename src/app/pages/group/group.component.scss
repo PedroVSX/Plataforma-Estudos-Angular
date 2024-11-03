@@ -93,18 +93,41 @@ $text-color: white;
 
 .topics-container {
     display: flex;
-    margin: 2rem 0 2rem 1rem;
-    flex-direction: column;
+    margin: 2rem 0 0 1rem;
 
-    .topics-container-title {
-        text-align: left;
-        font-size: 1.5rem;
+    .left {
+        width: fit-content;
+        margin-right: 1rem;
+
+        .left-topics-container-title {
+            text-align: left;
+            font-size: 1.5rem;
+        }
+    
+        .left-topics {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            gap: 1rem;
+        }
     }
 
-    .topics {
-        display: flex;
-        flex-direction: column;
-        margin-top: 1rem;
-        gap: 1rem;
+    .right {
+        position: sticky; /* Faz a div permanecer visível ao rolar */
+        top: 20px; /* Distância do topo da viewport */
+        width: 100%; /* Largura do card */
+        height: 90vh; /* Ajusta a altura conforme o conteúdo */
+        background-color: #ffffff; /* Cor de fundo do card */
+        border-radius: 10px; /* Bordas arredondadas */
+        padding: 1rem; /* Espaçamento interno */
+        margin: 3rem 1rem 0 0;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+        .right-card {
+            h2 {
+                margin-top: 0;
+            }
+        }
     }
 }
+

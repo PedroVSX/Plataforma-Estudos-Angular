@@ -1,11 +1,11 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { TopicCardComponent } from '../topic-card/topic-card.component';
+import { TopicCardComponent } from '../../cards/topic-card/topic-card.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-topic-slider',
   standalone: true,
-  imports: [TopicCardComponent, CommonModule],
+  imports: [CommonModule, TopicCardComponent],
   templateUrl: './topic-slider.component.html',
   styleUrl: './topic-slider.component.scss'
 })
