@@ -48,13 +48,6 @@ $text-color: white;
         }
     }
 
-    // Media queries para responsividade
-    @media (max-width: 768px) {
-        .search-container {
-            width: 80% !important;
-        }
-    }
-
     .topics-container {
         margin: 1rem 0 2rem 0;
 
@@ -76,6 +69,58 @@ $text-color: white;
             margin: 1rem 0 2rem 1rem;
             border-radius: 50%;
             cursor: pointer;
+        }
+    }
+}
+
+/* Responsividade */ 
+@media (max-width: 1024px) {
+    .home-content {
+
+        .search-center-container {
+
+            .search-container {
+                width: 80% !important;
+                height: 50px;
+                
+                .search-box {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home-content {
+
+        .search-center-container {
+
+            .search-container {
+                width: 80% !important;
+                height: 50px;
+                
+                .search-box {
+                    font-size: 1.15rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content {
+
+        .search-center-container {
+
+            .search-container {
+                width: 80% !important;
+                height: 50px;
+                
+                .search-box {
+                    font-size: 1rem;
+                }
+            }
         }
     }
 }

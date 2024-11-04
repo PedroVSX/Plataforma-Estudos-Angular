@@ -7,9 +7,6 @@ import { AccountSettingsComponent } from './pages/account-settings/account-setti
 import { TopicComponent } from './pages/topic/topic.component';
 import { MyGroupsComponent } from './pages/my-groups/my-groups.component';
 
-import { TopicCardComponent } from './components/cards/topic-card/topic-card.component';
-import { TopicSliderComponent } from './components/sliders/topic-slider/topic-slider.component';
-
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
@@ -18,6 +15,4 @@ export const routes: Routes = [
   { path: 'account-settings', component: AccountSettingsComponent },
   { path: 'topic', component: TopicComponent },
   { path: 'my-groups', component: MyGroupsComponent },
-  { path: 'card', component: TopicCardComponent },
-  { path: 'slider', component: TopicSliderComponent }
 ];

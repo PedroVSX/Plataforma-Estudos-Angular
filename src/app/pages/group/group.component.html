@@ -1,42 +1,90 @@
-<app-navbar></app-navbar>
+<div class="container">
+    <app-navbar></app-navbar>
 
-<div class="group-container">
-    <div class="banner-center-container">
-        <div class="banner-container">
-            <img src="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2021/11/o-que-e-html.jpg"
-            alt="group-banner" class="community-banner">
-        </div>
-    </div>
-
-    <div class="group-info">
-        <div class="group-picture-and-info">
-            <div class="group-picture">
-                <img src="https://img.freepik.com/free-photo/rear-view-programmer-working-all-night-long_1098-18697.jpg" alt="group-picture">
-            </div>
-            <div class="info">
-                <h1>Grupo de Desenvolvimento Web</h1>
-                <p>Uma breve descrição do grupo aqui</p>
+    <div class="group-container">
+        <div class="banner-center-container">
+            <div class="banner-container">
+                <img src="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2021/11/o-que-e-html.jpg"
+                alt="group-banner" class="community-banner">
             </div>
         </div>
-        <button class="join-button">Juntar-se</button>
-    </div>
-</div>
 
-<div class="topics-container">
-    <div class="left">
-        <p class="left-topics-container-title">Tópicos recentes</p>
-        <div class="left-topics">
-            <app-topic-card></app-topic-card>
-            <app-topic-card></app-topic-card>
-            <app-topic-card></app-topic-card>
-            <app-topic-card></app-topic-card>
-            <app-topic-card></app-topic-card>
+        <div class="group-info">
+            <div class="group-picture-and-info">
+                <div class="group-picture">
+                    <img src="https://img.freepik.com/free-photo/rear-view-programmer-working-all-night-long_1098-18697.jpg" alt="group-picture">
+                </div>
+                <div class="info">
+                    <h1>Grupo de Desenvolvimento Web</h1>
+                    <p>Uma breve descrição do grupo aqui</p>
+                </div>
+            </div>
+            <button class="join-button">Juntar-se</button>
         </div>
     </div>
-    
-    <div class="right">
-        <div class="right-card">
+
+    <div class="topics-container">
+        <div class="left">
+            <p class="left-topics-container-title">Tópicos recentes</p>
+            <div class="left-topics">
+                <app-topic-card></app-topic-card>
+                <app-topic-card></app-topic-card>
+                <app-topic-card></app-topic-card>
+                <app-topic-card></app-topic-card>
+                <app-topic-card></app-topic-card>
+            </div>
+        </div>
+        
+        <div class="right" *ngIf="!isMobile">
+            <div class="right-card">
+                <p class="form-title">Crie um tópico</p>
+                <form class="topic-form">
+                    <label for="titulo">Título</label>
+                    <input type="text" id="titulo" placeholder="Digite o título do tópico">
             
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao" placeholder="Digite a descrição do tópico"></textarea>
+
+                    <div class="attachments-area">
+                        <div class="attachments">
+                            <p>Adicione anexos aqui</p>
+                        </div>
+                    </div>
+            
+                    <div class="topic-form-button-container">
+                        <button class="topic-form-button" type="submit">Criar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <button class="floating-btn" *ngIf="isMobile" (click)="toggleRightPopup()">+</button>
+
+    </div>
+
+    <div class="right-popup" *ngIf="isPopupOpen">
+        <div class="popup-content">
+            <button class="close-btn" (click)="toggleRightPopup()">X</button>
+            <div class="right-card">
+                <p class="form-title">Crie um tópico</p>
+                <form class="topic-form">
+                    <label for="titulo-popup">Título</label>
+                    <input type="text" id="titulo-popup" placeholder="Digite o título do tópico">
+            
+                    <label for="descricao-popup">Descrição</label>
+                    <textarea id="descricao-popup" placeholder="Digite a descrição do tópico"></textarea>
+
+                    <div class="attachments-area">
+                        <div class="attachments">
+                            <p>Adicione anexos aqui</p>
+                        </div>
+                    </div>
+            
+                    <div class="topic-form-button-container">
+                        <button class="topic-form-button" type="submit">Criar</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

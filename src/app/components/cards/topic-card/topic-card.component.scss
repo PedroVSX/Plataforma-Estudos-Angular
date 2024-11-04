@@ -87,7 +87,7 @@ $description-color: #555555;
 /* Responsividade */
 @media (max-width: 1024px) {
     .container {
-        width: 90%;
+        width: 100%;
         height: auto;
         flex-direction: column;
         padding: 1rem;
@@ -110,7 +110,7 @@ $description-color: #555555;
                 margin-top: 1rem;
 
                 .description {
-                    font-size: 0.95rem;
+                    font-size: 1.25rem;
                 }
             }
         }
@@ -126,6 +126,7 @@ $description-color: #555555;
     .container {
         flex-direction: column;
         width: 100%;
+        height: auto;
         padding: 1rem;
 
         .user-and-description-container {
@@ -144,7 +145,7 @@ $description-color: #555555;
                 margin-top: 0.8rem;
 
                 .description {
-                    font-size: 0.9rem;
+                    font-size: 1.1rem;
                 }
             }
         }
@@ -179,7 +180,7 @@ $description-color: #555555;
                 margin-top: 0.5rem;
 
                 .description {
-                    font-size: 0.85rem;
+                    font-size: 0.9rem;
                 }
             }
         }

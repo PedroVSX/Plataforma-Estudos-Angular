@@ -30,6 +30,20 @@ $text-color: white;
         }
     }
 
+    .profile-icon {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        margin-left: calc(100% - 12rem);
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        z-index: 1;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
     .navbar-links {
         display: flex;
         align-items: center; // Alinha o botão "Entrar" com os links
@@ -61,20 +75,8 @@ $text-color: white;
             }
         }
 
-        .profile-icon {
-            width: 40px;
-            height: 40px;
-            margin-left: auto;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-
-            &:hover {
-                transform: scale(1.1);
-            }
-        }
-
         .login-btn {
-            margin-left: 1rem;
+            margin-left: auto;
             background-color: $button-bg;
             border: none;
             color: $text-color;
@@ -113,23 +115,39 @@ $text-color: white;
             transition: all 0.3s ease; // Transição suave para animações
         }
     }
+}
 
-    @media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .navbar {
+        .profile-icon {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            margin-left: calc(100% - 7.5rem);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            z-index: 1;
+    
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
         .navbar-links {
             display: none; // Esconde os links na versão mobile
         }
-
+    
         .hamburger {
             display: flex; // Mostra o hamburger em telas pequenas
         }
-
+    
         &.active .navbar-links {
             display: flex; // Mostra o menu quando ativo
             flex-direction: column; // Muda a direção para coluna
             align-items: center; // Centraliza os itens
             justify-content: center;
         }
-
+    
         .navbar-links {
             height: auto; // Esconde o menu em telas pequenas
             width: 100%; // Faz o menu ocupar a largura total
@@ -140,17 +158,115 @@ $text-color: white;
             z-index: 5; // Garante que o menu fique acima de outros elementos
             padding: 1rem 0; // Espaçamento interno no menu
         }
-
+    
         .navbar-menu {
             flex-direction: column; // Muda a direção do menu para coluna
             width: 100%; // Faz o menu ocupar toda a largura
             align-items: center; // Centraliza os itens
-
+    
             li {
                 margin-bottom: 0.5rem !important; // Aumenta o espaçamento entre os itens
             }
         }
+    
+        .login-btn {
+            margin: 0.5rem 0 0 0 !important;
+            width: auto; // Remove a largura fixa para garantir centralização
+            padding: 0.75rem 1.5rem;
+            text-align: center;
+            align-self: center; // Centraliza o botão em relação aos outros elementos
+            display: block; // Garante que o botão se comporte como um bloco para centralizar corretamente
+        }
+    }
+}
 
+@media (max-width: 768px) {
+    .navbar {
+        .navbar-links {
+            display: none; // Esconde os links na versão mobile
+        }
+    
+        .hamburger {
+            display: flex; // Mostra o hamburger em telas pequenas
+        }
+    
+        &.active .navbar-links {
+            display: flex; // Mostra o menu quando ativo
+            flex-direction: column; // Muda a direção para coluna
+            align-items: center; // Centraliza os itens
+            justify-content: center;
+        }
+    
+        .navbar-links {
+            height: auto; // Esconde o menu em telas pequenas
+            width: 100%; // Faz o menu ocupar a largura total
+            position: absolute; // Torna o menu absoluto em relação ao navbar
+            top: 5rem; // Coloca abaixo da navbar
+            left: 0;
+            background-color: $navbar-bg; // Cor de fundo do menu
+            z-index: 5; // Garante que o menu fique acima de outros elementos
+            padding: 1rem 0; // Espaçamento interno no menu
+        }
+    
+        .navbar-menu {
+            flex-direction: column; // Muda a direção do menu para coluna
+            width: 100%; // Faz o menu ocupar toda a largura
+            align-items: center; // Centraliza os itens
+    
+            li {
+                margin-bottom: 0.5rem !important; // Aumenta o espaçamento entre os itens
+            }
+        }
+    
+        .login-btn {
+            margin: 0.5rem 0 0 0 !important;
+            width: auto; // Remove a largura fixa para garantir centralização
+            padding: 0.75rem 1.5rem;
+            text-align: center;
+            align-self: center; // Centraliza o botão em relação aos outros elementos
+            display: block; // Garante que o botão se comporte como um bloco para centralizar corretamente
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        .navbar-links {
+            display: none; // Esconde os links na versão mobile
+        }
+    
+        .hamburger {
+            display: flex; // Mostra o hamburger em telas pequenas
+        }
+    
+        &.active .navbar-links {
+            display: flex; // Mostra o menu quando ativo
+            flex-direction: column; // Muda a direção para coluna
+            align-items: center; // Centraliza os itens
+            justify-content: center;
+        }
+    
+        .navbar-links {
+            height: auto; // Esconde o menu em telas pequenas
+            width: 100%; // Faz o menu ocupar a largura total
+            position: absolute; // Torna o menu absoluto em relação ao navbar
+            top: 5rem; // Coloca abaixo da navbar
+            left: 0;
+            background-color: $navbar-bg; // Cor de fundo do menu
+            z-index: 5; // Garante que o menu fique acima de outros elementos
+            padding: 1rem 0; // Espaçamento interno no menu
+        }
+    
+        .navbar-menu {
+            flex-direction: column; // Muda a direção do menu para coluna
+            width: 100%; // Faz o menu ocupar toda a largura
+            align-items: center; // Centraliza os itens
+    
+            li {
+                margin-bottom: 0.5rem !important; // Aumenta o espaçamento entre os itens
+            }
+        }
+    
         .login-btn {
             margin: 0.5rem 0 0 0 !important;
             width: auto; // Remove a largura fixa para garantir centralização
