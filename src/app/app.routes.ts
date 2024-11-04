@@ -6,6 +6,7 @@ import { GroupComponent } from './pages/group/group.component';
 import { AccountSettingsComponent } from './pages/account-settings/account-settings.component';
 import { TopicComponent } from './pages/topic/topic.component';
 import { MyGroupsComponent } from './pages/my-groups/my-groups.component';
+import { FaqComponent } from './pages/faq/faq.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,5 +15,6 @@ export const routes: Routes = [
   { path: 'group', component: GroupComponent },
   { path: 'account-settings', component: AccountSettingsComponent },
   { path: 'topic', component: TopicComponent },
-  { path: 'my-groups', component: MyGroupsComponent }
+  { path: 'my-groups', component: MyGroupsComponent },
+  { path: 'faq', component: FaqComponent}
 ];
