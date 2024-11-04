@@ -404,6 +404,10 @@ $text-color: white;
                 }
             }
         }
+
+        .popup-content {
+            height: 740px;
+        }
     }
 }
 
@@ -543,6 +547,10 @@ $text-color: white;
                 }
             }
         }
+
+        .popup-content {
+            height: 710px;
+        }
     }
 }
 
@@ -644,7 +652,7 @@ $text-color: white;
             padding: 2rem;
             border-radius: 10px;
             width: calc(100% - 5rem);
-            height: 690px;
+            height: 710px;
             position: relative;
         }
     }

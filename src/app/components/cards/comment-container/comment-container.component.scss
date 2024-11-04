@@ -39,6 +39,8 @@ $description-color: #555555;
 
     .comment-images {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 1rem;
 
         .images {

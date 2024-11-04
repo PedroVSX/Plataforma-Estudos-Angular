@@ -14,5 +14,5 @@ export const routes: Routes = [
   { path: 'group', component: GroupComponent },
   { path: 'account-settings', component: AccountSettingsComponent },
   { path: 'topic', component: TopicComponent },
-  { path: 'my-groups', component: MyGroupsComponent },
+  { path: 'my-groups', component: MyGroupsComponent }
 ];

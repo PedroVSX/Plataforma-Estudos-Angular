@@ -1,25 +1,24 @@
-<app-navbar></app-navbar>
 <div class="container">
-    <div class="left-container">
-        <h1>Tópico</h1>
-        <div class="topic">
-            <app-topic-container></app-topic-container>
-        </div>
+    <app-navbar></app-navbar>
 
-        <h1>Comentários</h1>
-        <div class="comments">
-            <app-comment-container></app-comment-container>
-        </div>
-        <div class="add-comment">
-            <textarea class="comment" placeholder="Adicione um comentário..."></textarea>
-        </div>
+    <div class="page-design-left"></div>
 
+    <div class="page-container">
+        <div class="topic-and-comments-container">
+            <h1>Tópico</h1>
+            <div class="topic">
+                <app-topic-container></app-topic-container>
+            </div>
+
+            <h1>Comentários</h1>
+            <div class="comments">
+                <app-comment-container></app-comment-container>
+            </div>
+            <div class="add-comment">
+                <textarea class="comment" placeholder="Adicione um comentário..."></textarea>
+            </div>
+        </div>
     </div>
 
-    <div class="right-container">
-        <h1>Tópicos recentes</h1>
-        <div class="recent-topics-box">
-            
-        </div>
-    </div>
+    <div class="page-design-right"></div>
 </div>

@@ -1,52 +1,109 @@
 .container {
     display: flex;
-    gap: 2rem;
-    padding: 2rem;
+    flex-direction: column;
 
-    .left-container {
-        width: 70%;
-        height: 100%;
+    .page-design-left, .page-design-right {
+        position: fixed; /* Mantém fixo quando o usuário rola a página */
+        height: 100vh;
+        width: 15%;
+        z-index: 1; /* Garante que fique abaixo do conteúdo principal */
+    }
 
-        .topic {
-            margin-bottom: 2rem;
+    .page-design-left {
+        left: 0; /* Fixa no canto esquerdo */
+        background: linear-gradient(to right, rgba(4, 76, 244, 1), rgba(4, 76, 244, 0.25));
+    }
+
+    .page-design-right {
+        right: 0; /* Fixa no canto direito */
+        background: linear-gradient(to left, rgba(4, 76, 244, 1), rgba(4, 76, 244, 0.25));
+    }
+
+    .page-container {
+        display: flex;
+        gap: 2rem;
+        padding: 2rem;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        margin-top: 5rem;
+    
+        .topic-and-comments-container {
+            width: 70%;
+            height: 100%;
+    
+            .topic {
+                margin-bottom: 2rem;
+            }
+    
+            .add-comment {
+                display: flex;
+                height: 300px;
+                border: 2px solid #333333;
+                border-radius: 20px;
+                padding: 1rem;
+    
+                .comment {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    background-color: transparent;
+                    font-family: 'Nunito';
+                    font-size: 1rem;
+                    outline: none;
+                    resize: none;
+                }
+            }
+        }
+    
+        h1 {
+            color: #044CF4;
+        }
+    }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .container {
+        .page-design-left, .page-design-right {
+            display: none;
+            width: 0;
         }
 
-        .add-comment {
-            display: flex;
-            height: 300px;
-            border: 2px solid #333333;
-            border-radius: 20px;
-            padding: 1rem;
-
-            .comment {
+        .page-container {
+            .topic-and-comments-container {
                 width: 100%;
-                height: 100%;
-                border: none;
-                background-color: transparent;
-                font-family: 'Nunito';
-                font-size: 1rem;
-                outline: none;
-                resize: none;
             }
         }
     }
+}
 
-    .right-container {
-        width: 30%;
-        height: 100%;
-        text-align: center;
+@media (max-width: 768px) {
+    .container {
+        .page-design-left, .page-design-right {
+            display: none;
+            width: 0;
+        }
 
-        .recent-topics-box {
-            width: 100%;
-            height: 100%;
-            background-color: #ffffff;
-            box-shadow: rgba(4, 76, 244, 0.3) 0px 4px 8px 0px, rgba(4, 76, 244, 0.5) 0px 4px 20px 0px;
-            min-height: 372px;
-            border-radius: 20px;
+        .page-container {
+            .topic-and-comments-container {
+                width: 100%;
+            }
         }
     }
+}
 
-    h1 {
-        color: #044CF4 !important;
+@media (max-width: 480px) {
+    .container {
+        .page-design-left, .page-design-right {
+            display: none;
+            width: 0;
+        }
+
+        .page-container {
+            .topic-and-comments-container {
+                width: 100%;
+            }
+        }
     }
 }

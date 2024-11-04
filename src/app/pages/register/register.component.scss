@@ -126,3 +126,79 @@ $text-color: white;
         }
     }
 }
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .container {
+        .register-page-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .dark-section {
+              width: 100%;
+              clip-path: none;
+            }
+        
+            .light-section {
+                position: absolute;
+                height: 90%;
+                z-index: 2;
+
+                .register-box {
+                    transform: scale(1.25);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        .register-page-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .dark-section {
+              width: 100%;
+              clip-path: none;
+            }
+        
+            .light-section {
+                position: absolute;
+                height: 90%;
+                z-index: 2;
+
+                .register-box {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        .register-page-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .dark-section {
+              width: 100%;
+              clip-path: none;
+            }
+        
+            .light-section {
+                position: absolute;
+                height: 90%;
+                z-index: 2;
+
+                .register-box {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}

@@ -43,6 +43,8 @@ $description-color: #555555;
 
     .topic-images {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 1rem;
 
         .images {
